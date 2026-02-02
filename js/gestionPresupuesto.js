@@ -134,10 +134,14 @@ function agruparGastos(periodo, etiquetas, fechaDesde, fechaHasta) {
 
     let reducido = filtrado.reduce((acc, element) => {
         let clave = element.obtenerPeriodoAgrupacion(periodo)
-
-        if (!acc[clave]) acc[clave] = element.valor
+        
+        
+        if (!acc[clave])acc[clave] = element.valor
         else acc[clave] += element.valor
 
+        
+        acc[clave] = parseFloat(acc[clave].toFixed(2))
+        
         return acc
     }, {})
 
