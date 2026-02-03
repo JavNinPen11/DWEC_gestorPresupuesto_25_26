@@ -210,11 +210,11 @@ function repintar() {
 
     mostrarGastoWeb("listado-gastos-completo", presupuesto.listarGastos())
 
-    mostrarGastoWeb("agrupacion-dia", presupuesto.agruparGastos("dia"))
+    mostrarGastosAgrupadosWeb("agrupacion-dia", presupuesto.agruparGastos("dia"), "dia")
 
-    mostrarGastoWeb("agrupacion-mes", presupuesto.agruparGastos("mes"))
+    mostrarGastosAgrupadosWeb("agrupacion-mes", presupuesto.agruparGastos("mes"), "mes")
     
-    mostrarGastoWeb("agrupacion-mes", presupuesto.agruparGastos("anyo"))
+    mostrarGastosAgrupadosWeb("agrupacion-anyo", presupuesto.agruparGastos("anyo"), "anyo")
 }
 function actualizarPresupuestoWeb() {
     let nuevoPresupuesto = prompt("Ingrese el nuevo valor del presupuesto")
